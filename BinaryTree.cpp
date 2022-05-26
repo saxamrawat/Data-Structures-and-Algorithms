@@ -21,9 +21,9 @@ void preorder(struct node *root)
     {
         return;
     }
-    cout << root->data << " ";
-    preorder(root->left);
-    preorder(root->right);
+    cout << root->data << " ";  //considering the root value
+    preorder(root->left);       //traversing left tree
+    preorder(root->right);      //traversing right tree
 }
 
 void inorder(struct node *root)
@@ -32,9 +32,9 @@ void inorder(struct node *root)
     {
         return;
     }
-    inorder(root->left);
-    cout << root->data << " ";
-    inorder(root->right);
+    inorder(root->left);        //traversing left tree
+    cout << root->data << " ";  //considering the root value
+    inorder(root->right);       //traversing right tree
 }
 
 void postorder(struct node *root)
@@ -43,9 +43,9 @@ void postorder(struct node *root)
     {
         return;
     }
-    postorder(root->left);
-    postorder(root->right);
-    cout << root->data << " ";
+    postorder(root->left);      //traversing left tree
+    postorder(root->right);     //traversing right tree
+    cout << root->data << " ";  //considering the root value
 }
 
 int main()
